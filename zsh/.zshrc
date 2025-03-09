@@ -111,3 +111,31 @@ alias yeet="yay -Rns"
 eval "$(fnm env --use-on-cd --shell zsh)"
 
 PATH=~/.console-ninja/.bin:$PATH
+
+function cursor {
+  XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-~/.config}
+
+  # Allow users to override command-line options
+  if [[ -f $XDG_CONFIG_HOME/cursor-flags.conf ]]; then
+    CURSOR_USER_FLAGS="$(sed 's/#.*//' $XDG_CONFIG_HOME/cursor-flags.conf | tr '\n' ' ')"
+  else
+    CURSOR_USER_FLAGS=""
+  fi
+
+  # Process arguments to convert paths to absolute paths
+  processed_args=()
+  for arg in "$@"; do
+    if [[ -e "$arg" ]]; then
+      processed_args+=("$(realpath "$arg")")
+    else
+      processed_args+=("$arg")
+    fi
+  done
+
+  # Define cursor paths
+  CURSOR_BIN_PATH="/usr/bin/cursor"
+  CURSOR_DOWNLOADS_PATH="$HOME/Downloads/cursor"
+  
+  # Launch Cursor in the background, fully detached
+  (nohup $CURSOR_DOWNLOADS_PATH "${processed_args[@]}" $CURSOR_USER_FLAGS < /dev/null > /dev/null 2>&1 &)
+}
