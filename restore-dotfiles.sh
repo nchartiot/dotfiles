@@ -11,6 +11,11 @@ fi
 # Loop through all subdirectories
 for dir in */; do
   if [ -d "$dir" ]; then
+    if [ "$dir" = "LEGACY/" ]; then
+      echo "Skipping LEGACY directory..."
+      continue
+    fi
+    
     echo "Stowing $dir..."
     stow -v "$dir"
   fi

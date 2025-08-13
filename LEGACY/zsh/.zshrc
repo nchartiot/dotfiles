@@ -139,3 +139,5 @@ function cursor {
   # Launch Cursor in the background, fully detached
   (nohup env XDG_DATA_DIRS=/usr/share:/usr/local/share $CURSOR_BIN_PATH "${processed_args[@]}" $CURSOR_USER_FLAGS < /dev/null > /dev/null 2>&1 &)
 }
+# Turso
+export PATH="$PATH:/home/nchartiot/.turso"
