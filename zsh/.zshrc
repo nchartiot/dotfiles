@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -107,37 +107,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias yeet="yay -Rns"
 eval "$(fnm env --use-on-cd --shell zsh)"
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
 
 PATH=~/.console-ninja/.bin:$PATH
 
-function cursor {
-  XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-~/.config}
-
-  # Allow users to override command-line options
-  if [[ -f $XDG_CONFIG_HOME/cursor-flags.conf ]]; then
-    CURSOR_USER_FLAGS="$(sed 's/#.*//' $XDG_CONFIG_HOME/cursor-flags.conf | tr '\n' ' ')"
-  else
-    CURSOR_USER_FLAGS=""
-  fi
-
-  # Process arguments to convert paths to absolute paths
-  processed_args=()
-  for arg in "$@"; do
-    if [[ -e "$arg" ]]; then
-      processed_args+=("$(realpath "$arg")")
-    else
-      processed_args+=("$arg")
-    fi
-  done
-
-  # Define cursor paths
-  CURSOR_BIN_PATH="/usr/bin/cursor"
-  CURSOR_DOWNLOADS_PATH="$HOME/Downloads/cursor"
-  
-  # Launch Cursor in the background, fully detached
-  (nohup env XDG_DATA_DIRS=/usr/share:/usr/local/share $CURSOR_BIN_PATH "${processed_args[@]}" $CURSOR_USER_FLAGS < /dev/null > /dev/null 2>&1 &)
-}
-# Turso
-export PATH="$PATH:/home/nchartiot/.turso"
+alias yeet="yay -Rns"
