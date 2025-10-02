@@ -112,5 +112,6 @@ eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 PATH=~/.console-ninja/.bin:$PATH
+PATH=~/.local/bin/:$PATH
 
 alias yeet="yay -Rns"
