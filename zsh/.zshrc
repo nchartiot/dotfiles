@@ -115,3 +115,10 @@ PATH=~/.console-ninja/.bin:$PATH
 PATH=~/.local/bin/:$PATH
 
 alias yeet="yay -Rns"
+
+# bun completions
+[ -s "/home/nchartiot/.bun/_bun" ] && source "/home/nchartiot/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

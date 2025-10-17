@@ -5,3 +5,4 @@ font-family = JetBrainsMono Nerd Font
 font-feature = liga
 cursor-style = block
 keybind = shift+enter=text:\n
+app-notifications = no-clipboard-copy
