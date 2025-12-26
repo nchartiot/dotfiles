@@ -1,0 +1,72 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // replace file_finder::Toggle
+      "ctrl-p": [
+        "task::Spawn",
+        {
+          "task_name": "file_finder",
+          "reveal_target": "center"
+        }
+      ]
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-w": [
+        "pane::CloseActiveItem",
+        {
+          "close_pinned": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "VimControl && vim_mode == normal",
+    "bindings": {
+      "space space": [
+        "task::Spawn",
+        {
+          "task_name": "file_finder",
+          "reveal_target": "center"
+        }
+      ],
+      "space s g": [
+        "task::Spawn",
+        {
+          "task_name": "text_finder",
+          "reveal_target": "center"
+        }
+      ],
+      "space w": "pane::CloseActiveItem",
+      "space o": "outline::Toggle",
+      "space g b": "git::Branch",
+      "space t": "terminal_panel::ToggleFocus",
+      "space g g": "git_panel::ToggleFocus",
+      "space /": "pane::DeploySearch",
+      "escape escape": "workspace::Save",
+      "shift-u": "vim::Redo",
+      "space h": "editor::ToggleInlayHints",
+      "space e": "pane::RevealInProjectPanel",
+      "ctrl-a": "editor::ToggleCodeActions",
+      "] f": "vim::NextMethodStart",
+      "[ f": "vim::PreviousMethodStart"
+    }
+  }
+]
