@@ -8,6 +8,13 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // "language_servers": ["!eslint, !prettier"],
+  "always_treat_brackets_as_autoclosed": false,
+  "show_signature_help_after_edits": false,
+  "indent_guides": {
+    "background_coloring": "disabled",
+    "coloring": "fixed"
+  },
+  "colorize_brackets": true,
   "agent": {
     "dock": "right",
     "model_parameters": [],
@@ -88,7 +95,7 @@
   "theme": {
     "mode": "dark",
     "light": "Gruvbox Light",
-    "dark": "Catppuccin Mocha - No Italics",
+    "dark": "Catppuccin Mocha",
   },
   "lsp": {
     "oxlint": {
