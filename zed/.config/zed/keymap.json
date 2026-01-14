@@ -68,5 +68,24 @@
       "] f": "vim::NextMethodStart",
       "[ f": "vim::PreviousMethodStart"
     }
+  },
+  {
+    "context": "showing_completions",
+    "bindings": {
+      "ctrl-d": null
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "ctrl-d": null
+    }
+  },
+{
+  // insert mode
+  "context": "Editor && vim_mode == insert",
+  "bindings": {
+    "j k": "vim::NormalBefore"
   }
+}
 ]
