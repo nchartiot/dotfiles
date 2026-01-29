@@ -7,7 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  // "language_servers": ["!eslint, !prettier"],
+  // "language_servers": ["!eslint", "..."],
   "always_treat_brackets_as_autoclosed": false,
   "show_signature_help_after_edits": false,
   "indent_guides": {
@@ -17,38 +17,38 @@
   "colorize_brackets": true,
   "agent": {
     "dock": "right",
-    "model_parameters": [],
+    "model_parameters": []
   },
   "tabs": {
     "file_icons": true,
-    "git_status": false,
+    "git_status": false
   },
   "toolbar": {
     "quick_actions": false,
-    "breadcrumbs": false,
+    "breadcrumbs": false
   },
   "sticky_scroll": {
-    "enabled": false,
+    "enabled": false
   },
   "git": {
     "inline_blame": {
-      "enabled": false,
-    },
+      "enabled": false
+    }
   },
   "relative_line_numbers": "enabled",
   "gutter": {
     "line_numbers": true,
     "breakpoints": true,
     "runnables": true,
-    "folds": true,
+    "folds": true
   },
   "minimap": {
-    "show": "never",
+    "show": "never"
   },
   "show_wrap_guides": true,
   "tab_bar": {
     "show_nav_history_buttons": false,
-    "show": true,
+    "show": true
   },
   "title_bar": {
     "show_branch_name": true,
@@ -57,15 +57,16 @@
     "show_user_picture": true,
     "show_sign_in": true,
     "show_menus": false,
-    "show_branch_icon": false,
+    "show_branch_icon": false
   },
   "telemetry": {
     "diagnostics": true,
-    "metrics": false,
+    "metrics": false
   },
   "vim_mode": true,
+  "scroll_sensitivity": 2.0,
   "terminal": {
-    "env": {},
+    "env": {}
   },
   "project_panel": {
     "indent_size": 10.0,
@@ -73,13 +74,13 @@
     "entry_spacing": "comfortable",
     "sticky_scroll": true,
     "button": true,
-    "auto_fold_dirs": false,
+    "auto_fold_dirs": false
   },
   // "base_keymap": "VSCode",
   "autosave": {
     "after_delay": {
-      "milliseconds": 1000,
-    },
+      "milliseconds": 1000
+    }
   },
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "ui_font_family": "JetBrainsMono Nerd Font",
@@ -87,7 +88,7 @@
   "icon_theme": {
     "mode": "dark",
     "light": "Zed (Default)",
-    "dark": "Material Icon Theme",
+    "dark": "Material Icon Theme"
   },
   "ui_font_size": 16,
   "buffer_font_size": 14.0,
@@ -95,7 +96,7 @@
   "theme": {
     "mode": "dark",
     "light": "Gruvbox Light",
-    "dark": "Catppuccin Mocha",
+    "dark": "Catppuccin Mocha"
   },
   "lsp": {
     "oxlint": {
@@ -106,165 +107,165 @@
           "disableNestedConfig": false,
           "fixKind": "safe_fix",
           "typeAware": true,
-          "unusedDisableDirectives": "deny",
-        },
-      },
+          "unusedDisableDirectives": "deny"
+        }
+      }
     },
     "oxfmt": {
       "initialization_options": {
         "settings": {
           "configPath": null,
-          "run": "onSave",
-        },
-      },
-    },
+          "run": "onSave"
+        }
+      }
+    }
   },
   "languages": {
     "CSS": {
       "format_on_save": "on",
       "prettier": {
-        "allowed": false,
+        "allowed": false
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt",
-          },
-        },
-      ],
+            "name": "oxfmt"
+          }
+        }
+      ]
     },
     "HTML": {
       "format_on_save": "on",
       "prettier": {
-        "allowed": false,
+        "allowed": false
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt",
-          },
-        },
-      ],
+            "name": "oxfmt"
+          }
+        }
+      ]
     },
     "JavaScript": {
       "format_on_save": "on",
       "prettier": {
-        "allowed": false,
+        "allowed": false
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt",
-          },
+            "name": "oxfmt"
+          }
         },
         {
-          "code_action": "source.fixAll.oxc",
-        },
-      ],
+          "code_action": "source.fixAll.oxc"
+        }
+      ]
     },
     "JSX": {
       "format_on_save": "on",
       "prettier": {
-        "allowed": false,
+        "allowed": false
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt",
-          },
-        },
-      ],
+            "name": "oxfmt"
+          }
+        }
+      ]
     },
     "JSON": {
       "format_on_save": "on",
       "prettier": {
-        "allowed": false,
+        "allowed": false
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt",
-          },
-        },
-      ],
+            "name": "oxfmt"
+          }
+        }
+      ]
     },
     "JSONC": {
       "format_on_save": "on",
       "prettier": {
-        "allowed": false,
+        "allowed": false
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt",
-          },
-        },
-      ],
+            "name": "oxfmt"
+          }
+        }
+      ]
     },
     "Markdown": {
       "format_on_save": "on",
       "prettier": {
-        "allowed": false,
+        "allowed": false
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt",
-          },
-        },
-      ],
+            "name": "oxfmt"
+          }
+        }
+      ]
     },
     "MDX": {
       "format_on_save": "on",
       "prettier": {
-        "allowed": false,
+        "allowed": false
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt",
-          },
-        },
-      ],
+            "name": "oxfmt"
+          }
+        }
+      ]
     },
     "TypeScript": {
       "format_on_save": "on",
       "prettier": {
-        "allowed": false,
+        "allowed": false
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt",
-          },
-        },
-      ],
+            "name": "oxfmt"
+          }
+        }
+      ]
     },
     "TSX": {
       "format_on_save": "on",
       "prettier": {
-        "allowed": false,
+        "allowed": false
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt",
-          },
-        },
-      ],
+            "name": "oxfmt"
+          }
+        }
+      ]
     },
     "YAML": {
       "format_on_save": "on",
       "prettier": {
-        "allowed": false,
+        "allowed": false
       },
       "formatter": [
         {
           "language_server": {
-            "name": "oxfmt",
-          },
-        },
-      ],
-    },
-  },
+            "name": "oxfmt"
+          }
+        }
+      ]
+    }
+  }
 }
