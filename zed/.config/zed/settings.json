@@ -7,7 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  // "language_servers": ["!eslint", "..."],
+  "language_servers": ["!eslint", "..."],
   "always_treat_brackets_as_autoclosed": false,
   "show_signature_help_after_edits": false,
   "indent_guides": {
@@ -69,6 +69,7 @@
     "env": {}
   },
   "project_panel": {
+    "hide_root": true,
     "indent_size": 10.0,
     "dock": "right",
     "entry_spacing": "comfortable",
