@@ -7,20 +7,6 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
-    "bindings": {
-      // replace file_finder::Toggle
-      "ctrl-p": [
-        "task::Spawn",
-        {
-          "task_name": "file_finder",
-          "reveal_target": "center"
-        }
-      ]
-      // "shift shift": "file_finder::Toggle"
-    }
-  },
-  {
     "context": "Editor && vim_mode == insert",
     "bindings": {
       // "j k": "vim::NormalBefore"

@@ -7,7 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "language_servers": ["!eslint", "..."],
+  "language_servers": ["!eslint", "!typescript-language-server", "..."],
+  "edit_predictions": {
+    "provider": "zed",
+    "mode": "subtle"
+  },
+  "agent_servers": {
+    "opencode": {
+      "type": "extension",
+      "default_mode": "build"
+    }
+  },
   "always_treat_brackets_as_autoclosed": false,
   "show_signature_help_after_edits": false,
   "indent_guides": {
@@ -100,6 +110,21 @@
     "dark": "Catppuccin Mocha"
   },
   "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    },
     "oxlint": {
       "initialization_options": {
         "settings": {
@@ -161,19 +186,6 @@
         },
         {
           "code_action": "source.fixAll.oxc"
-        }
-      ]
-    },
-    "JSX": {
-      "format_on_save": "on",
-      "prettier": {
-        "allowed": false
-      },
-      "formatter": [
-        {
-          "language_server": {
-            "name": "oxfmt"
-          }
         }
       ]
     },
