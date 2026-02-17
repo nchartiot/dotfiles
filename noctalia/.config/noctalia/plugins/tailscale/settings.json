@@ -4,7 +4,7 @@
   "showIpAddress": false,
   "showPeerCount": false,
   "hideDisconnected": false,
-  "terminalCommand": "",
+  "terminalCommand": "ghostty",
   "pingCount": 5,
   "defaultPeerAction": "copy-ip"
 }
