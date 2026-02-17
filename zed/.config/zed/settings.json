@@ -7,7 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "language_servers": ["!eslint", "!typescript-language-server", "..."],
+  "language_servers": ["!eslint", "!typescript-language-server", "!vtsls", "..."],
   "edit_predictions": {
     "provider": "zed",
     "mode": "subtle"
