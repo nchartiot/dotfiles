@@ -1,17 +1,14 @@
-# plugins=(
-#   git
-#   zsh-autosuggestions
-#   zsh-syntax-highlighting
-# )
-
 # Enable Zsh autocompletion system
 autoload -Uz compinit && compinit
 
 # Load the completion list module
 zmodload zsh/complist
 
-# Enable colored output for the completion menu
-zstyle ':completion:*' list-colors ""
+# Generate the LS_COLORS environment variable
+eval "$(dircolors -b)"
+
+# Feed LS_COLORS to the completion menu
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # Enable arrow-key navigation for the completion menu
 zstyle ':completion:*' menu select
