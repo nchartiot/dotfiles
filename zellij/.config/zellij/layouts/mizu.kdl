@@ -1,0 +1,32 @@
+layout {
+    tab_template name="ui" {
+        children
+        pane size=1 borderless=true {
+            plugin location="tab-bar"
+        }
+    }
+    ui name="dev" focus=true {
+        pane {
+            command "nr"
+            args "dev"
+        }
+    }
+    ui name="git" {
+        pane {
+            command "lazygit"
+        }
+    }
+    ui name="docker" {
+        pane {
+            command "lazydocker"
+        }
+    }
+    ui name="agent" {
+        pane {
+            command "opencode"
+        }
+    }
+    ui name="terminal" {
+        pane
+    }
+}

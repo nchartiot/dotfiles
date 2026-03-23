@@ -7,6 +7,11 @@ keybinds clear-defaults=true {
         bind "ctrl 2" { GoToTab 2; }
         bind "ctrl 3" { GoToTab 3; }
         bind "ctrl 4" { GoToTab 4; }
+        bind "ctrl 5" { GoToTab 5; }
+        bind "ctrl 6" { GoToTab 6; }
+        bind "ctrl 7" { GoToTab 7; }
+        bind "ctrl 8" { GoToTab 8; }
+        bind "ctrl 9" { GoToTab 9; }
     }
     pane {
         bind "left" { MoveFocus "left"; }
