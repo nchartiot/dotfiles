@@ -1,5 +1,0 @@
-os:
-  edit: "zed --wait {{filename}}"
-  editAtLine: "zed --wait {{filename}}:{{line}}"
-  open: "zeditor {{filename}}"
-  openLink: "zen-browser {{link}}"
